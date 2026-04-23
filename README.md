@@ -1,5 +1,7 @@
 # Awesome LiDAR-Camera Calibration (2023–2026)
-
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+[![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
 A curated list of **recent (2023 – 2026) LiDAR–Camera extrinsic calibration** papers, toolboxes, and resources.
 
 > Inspired by and complementary to [Deephome/Awesome-LiDAR-Camera-Calibration](https://github.com/Deephome/Awesome-LiDAR-Camera-Calibration) — this repo focuses on the newest works (roughly 2023 → 2026) that are not yet indexed there, including foundation-model / SAM / NeRF / 3D Gaussian Splatting based calibration, BEV-based methods, and joint Camera–LiDAR–Radar / Event camera calibration.
