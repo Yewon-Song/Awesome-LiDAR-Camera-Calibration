@@ -10,12 +10,16 @@ A curated list of **recent (2023 – 2026) LiDAR–Camera extrinsic calibration*
 
 - [Surveys & Reviews](#surveys--reviews)
 - [Target-based Methods](#target-based-methods)
-- [Targetless — Motion-based](#targetless--motion-based)
-- [Targetless — Scene / Edge / Intensity-based](#targetless--scene--edge--intensity-based)
-- [Targetless — Deep Learning-based](#targetless--deep-learning-based)
-- [Foundation Models / SAM / NeRF / 3D Gaussian Splatting](#foundation-models--sam--nerf--3d-gaussian-splatting)
+- [Targetless Methods](#targetless-methods)
+    - [Motion-based](#motion-based)
+    - [Scene / Edge / Intensity-based](#scene--edge--intensity-based)
+    - [Deep Learning-based](#deep-learning-based)
+    - [Foundation Models / SAM / NeRF / 3D Gaussian Splatting](#foundation-models--sam--nerf--3d-gaussian-splatting)
 - [Online / Continuous Calibration](#online--continuous-calibration)
-- [Multi-sensor Joint Calibration (LiDAR–Camera–IMU / Radar / Event)](#multi-sensor-joint-calibration-lidarcameraimu--radar--event)
+- [Multi-sensor Joint Calibration](#multi-sensor-joint-calibration)
+    - [LiDAR–Camera–IMU](#lidarcameraimu)
+    - [LiDAR–Camera–Radar](#lidarcameraradar)
+    - [LiDAR–Camera–Event](#lidarcameraevent)
 - [Toolboxes](#toolboxes)
 - [Contributing](#contributing)
 
@@ -50,7 +54,11 @@ Calibration using dedicated targets (checkerboards, ArUco, custom 3D objects).
 
 ---
 
-## Targetless — Motion-based
+## Targetless Methods
+
+Methods that do **not** require any physical calibration target. Grouped by the core cue they rely on.
+
+### Motion-based
 
 Hand-eye style calibration from ego-motion / odometry.
 
@@ -65,7 +73,7 @@ Hand-eye style calibration from ego-motion / odometry.
 
 ---
 
-## Targetless — Scene / Edge / Intensity-based
+### Scene / Edge / Intensity-based
 
 Classical targetless methods based on edge alignment, mutual information, or intensity/reflectance cues.
 
@@ -80,7 +88,7 @@ Classical targetless methods based on edge alignment, mutual information, or int
 
 ---
 
-## Targetless — Deep Learning-based
+### Deep Learning-based
 
 End-to-end / regression / flow-based learning approaches.
 
@@ -104,7 +112,7 @@ End-to-end / regression / flow-based learning approaches.
 
 ---
 
-## Foundation Models / SAM / NeRF / 3D Gaussian Splatting
+### Foundation Models / SAM / NeRF / 3D Gaussian Splatting
 
 Recent wave of calibration methods that leverage foundation models or neural scene representations.
 
@@ -146,7 +154,18 @@ Methods that maintain valid extrinsics at runtime / detect miscalibration.
 
 ---
 
-## Multi-sensor Joint Calibration (LiDAR–Camera–IMU / Radar / Event)
+## Multi-sensor Joint Calibration
+
+Calibration methods that go beyond a single LiDAR ↔ Camera pair, jointly handling additional modalities.
+
+### LiDAR–Camera–IMU
+
+- **OA-LICalib** (2023, IEEE T-RO) — see [Motion-based](#motion-based).
+
+- **Targetless Intrinsics and Extrinsic Calibration of Multiple LiDARs and Cameras with IMU using Continuous-Time Estimation** (2025, arXiv:2501.02821), [paper](https://arxiv.org/abs/2501.02821)
+  - Continuous-time joint calibration of multi-LiDAR + multi-camera + IMU without targets.
+
+### LiDAR–Camera–Radar
 
 - **CLRNet: Targetless Extrinsic Calibration for Camera, Lidar and 4D Radar Using Deep Learning** (2026, arXiv:2603.15767), [paper](https://arxiv.org/abs/2603.15767)
   - End-to-end joint / pairwise calibration across camera + LiDAR + 4D radar.
@@ -154,12 +173,10 @@ Methods that maintain valid extrinsics at runtime / detect miscalibration.
 - **RLCNet: An end-to-end deep learning framework for simultaneous online calibration of LiDAR, RADAR, and Camera** (2025, arXiv:2512.08262), [paper](https://arxiv.org/abs/2512.08262)
   - Joint LiDAR + RADAR + camera calibration with minimal supervision, real-time capable.
 
+### LiDAR–Camera–Event
+
 - **One target to align them all: LiDAR, RGB and event cameras extrinsic calibration for Autonomous Driving** (2026, arXiv:2511.12291), [paper](https://arxiv.org/abs/2511.12291)
   - Unified multi-modal target for event + RGB + LiDAR calibration.
-
-- **OA-LICalib** (2023, IEEE T-RO) — see [Motion-based](#targetless--motion-based).
-
-- **Targetless Intrinsics and Extrinsic Calibration of Multiple LiDARs and Cameras with IMU using Continuous-Time Estimation** (2025, arXiv:2501.02821) — see [Motion-based](#targetless--motion-based).
 
 ---
 
